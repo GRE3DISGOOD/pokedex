@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/sanitize.css" />
+    <title>Pokedex</title>
+  </head>
+
+  <body>
+    <section id="pokemons" class="pokemons">
+      <h2 class="pokemons__title">Liste de Pokémons</h2>
+      <div id="cards" class="cards">
+        <div class="card">
+          <h3 class="card__title">Bulbizarre</h3>
+          <img src="./assets/img/001.png" alt="bulbizarre" class="card__img">
+          <p class="card__text">Pokémon de type plante et poison</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">salamèche</h3>
+          <img src="./assets/img/004.png" alt="salamèche" class="card__img">
+          <p class="card__text">Pokémon de type feu et vol</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Carapuce</h3>
+          <img src="./assets/img/007.png" alt="carapuce" class="card__img">
+          <p class="card__text">Pokémon de type eau</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="new-pokemon" class="new-pokemon">
+      <h2 class="new-pokemon__title">Ajouter un nouveau Pokémon au pokédex</h2>
+      <form class="new-pokemon__form" id="new-pokemon__form" onsubmit="handleSubmit(event)">
+        <div class="new-pokemon__input-group">
+          <label for="pokemon-name">Nom du pokémon :</label>
+          <input type="text" name="pokemon-name" id="pokemon-name">
+        </div>
+        <div class="new-pokemon__input-group">
+          <label for="pokemon-img-link">Lien vers une image en ligne :</label>
+          <input type="text" name="pokemon-img-link" id="pokemon-img-link">
+        </div>
+        <div class="new-pokemon__textarea">
+          <label for="pokemon-text">Description du Pokémon :</label>
+          <textarea name="pokemon-text" id="pokemon-text" cols="10" rows="5"></textarea>
+        </div>
+        <div class="new-pokemon__submit">
+          <button class="new-pokemon-submit" type="submit">Ajouter le Pokémon</button>
+        </div>
+      </form>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
